@@ -1,0 +1,36 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0
+}
+
+
+.axisLaeyr,
+.xAxis,
+.domain, .tick {
+    display: none
+}
+
+.yAxis,
+.domain,
+.tick {
+    display: none;
+}
+
+.yGrid,
+.domain {
+    display: none;
+}
+
+.tick {
+    stroke-dasharray: 3
+}
+
+.plotLayer,
+.valueLine {
+    fill: none;
+    stroke-width: 1.5;
+    stroke: blue
+}
+

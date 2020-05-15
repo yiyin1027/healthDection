@@ -1,0 +1,29 @@
+.home-component .home-banner {
+    height: 500px;
+    margin: auto;
+    background-image: url(./image1.jpeg);
+    background-size: cover;
+    background-position: 50%; }
+.home-component .home-banner .banner-title {
+    font-size: 50px;
+    color: white; }
+
+.home-component .home-content .wrap {
+    background: #F3F6F8;
+    width: 100%;
+    overflow: auto; }
+
+.home-component .home-content .fleft {
+    background: #F3F6F8;
+    float: left;
+    width: 50%;
+    height: 1200px; }
+
+.home-component .home-content .fright {
+    background: #F3F6F8;
+    float: right;
+    width: 50%;
+    height: 1200px; }
+
+.home-component .preformatted {
+    white-space: pre-wrap; }

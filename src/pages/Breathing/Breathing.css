@@ -1,0 +1,11 @@
+.Breathing-component .Breathing-header {
+    height: 60px;
+    width: 100%; }
+
+.Breathing-component .Breathing-content {
+    background: #F3F6F8;
+    height: 2600px;
+    text-align: justify; }
+
+.Breathing-component .preformatted {
+    white-space: pre-wrap; }

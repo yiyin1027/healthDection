@@ -1,0 +1,44 @@
+<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>
+<script src='https://d3js.org/d3.v4.min.js'></script>
+<!-- Instantiate PubNub -->
+<script type="text/javascript">
+
+    var pubnub = new PubNub({
+        publishKey: 'pub-c-a49f577d-81c8-43c9-922e-3b13d0bbc91d',
+        subscribeKey: 'sub-c-2c446f30-32cd-11e9-aca0-3eee1dbf820c'
+    });
+
+pubnub.addListener({
+    message: function(message) {
+        console.log(JSON.stringify(message));
+    }
+})
+
+pubnub.subscribe({
+    channels: ['cloudChannel']
+});
+
+function startInterval() {
+    interval = setInterval(function() {
+        let date = new Date();
+        let deviceID = `device:${date.getDate()}:${date.getMonth() + 1}:${date.getFullYear()}:${date.getHours()}:00:00`;
+        let BreathRate = d3.randomNormal(15, 2)();
+        let HeartRate = d3.randomNormal(55, 5)();
+        let falldetected = Math.round(Math.random()-0.3);
+        let timestamp = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+        this.pubnub.publish({
+                message: {
+                    "BreathRate": BreathRate,
+                    "deviceID": deviceID,
+                    "Falldetected": falldetected,
+                    "HeartRate": HeartRate,
+                    "timestamp": timestamp,
+                    },
+                    channel: 'cloudChannel'
+                });
+    }, 1000);
+}
+
+startInterval()
+
+</script>

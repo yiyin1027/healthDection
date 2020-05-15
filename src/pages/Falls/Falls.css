@@ -1,0 +1,11 @@
+.falls-component .falls-header {
+    height: 60px;
+    width: 100%; }
+
+.falls-component .falls-content {
+    background: #F3F6F8;
+    height: 2800px;
+    text-align: justify; }
+
+.falls-component .preformatted {
+    white-space: pre-wrap; }
