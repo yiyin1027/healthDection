@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm build",
     "test": "react-scripts test",
     "deploy": "aws s3 sync build/ s3://react-js-ui",
     "eject": "react-scripts eject"
