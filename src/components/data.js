@@ -7,7 +7,7 @@ import Amplify, {API, graphqlOperation} from 'aws-amplify';
 import * as d3 from 'd3';
 import {Line, loadAllData, XAxis, YAxis, YGrid} from "./LineChartComponent";
 
-/*Amplify.configure(awsmobile);
+Amplify.configure(awsmobile);
 const ListTests = `query ListTests{listTests(limit:5){items{deviceID timestamp BreathRate HeartRate falldetected}}}`;
 const GetTest = `query GetTest($deviceID: String! $timestamp: String!){
   getTest(deviceID:$deviceID,timestamp:$timestamp){
@@ -16,7 +16,7 @@ const GetTest = `query GetTest($deviceID: String! $timestamp: String!){
     BreathRate
     HeartRate
     falldetected
-  }}`;*/
+  }}`;
 
 class TestList extends React.Component {
     testItems() {
